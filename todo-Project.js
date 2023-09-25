@@ -1,8 +1,9 @@
 const todoForm = document.querySelector(".form-todo");
 const formInput = document.querySelector(".form-todo input[type='text']");
 const toDoList = document.querySelector(".addATodo");
-// console.log(formInput);
-// console.log(todoForm);
+
+
+
 todoForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const newTodoText = formInput.value;
@@ -16,6 +17,9 @@ todoForm.addEventListener("submit", (event) => {
   newLi.innerHTML = newLiInnerHtml;
   toDoList.append(newLi);
 });
+
+
+
 toDoList.addEventListener("click", (e) => {
   if (e.target.classList.contains("done")) {
     const spanLi = e.target.parentNode.previousElementSibling;
