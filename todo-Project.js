@@ -23,7 +23,8 @@ todoForm.addEventListener("submit", (event) => {
 toDoList.addEventListener("click", (e) => {
   if (e.target.classList.contains("done")) {
     const spanLi = e.target.parentNode.previousElementSibling;
-    spanLi.style.textDecoration = "line-through";
+    spanLi.style.textDecoration = spanLi.style.textDecoration === "line-through" ? "none" : "line-through";
+
   }
   if (e.target.classList.contains("remove")) {
     const removeElement = e.target.parentNode.parentNode;
